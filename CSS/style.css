@@ -1,0 +1,137 @@
+:root {
+  --primary-main_color: #eff7f6;
+  --primary-second_color: #b2f7ef;
+  --primary-third_color: #7bdff2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Rowdies", sans-serif;
+}
+
+body {
+  background: var(--primary-main_color);
+  line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* start sin in section */
+.sin_in {
+  display: none;  
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: rgba(0, 0, 0, 0.652);
+  padding: 20px 0px 100px 20px;
+  border-radius: 30px;
+}
+.sign_out {
+  float: inline-end;
+  width: 30px;
+  height: 30px;
+  background: #000;
+  border: 2px solid var(--primary-third_color);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.sign_out:hover {
+  box-shadow: 0 0 2px 2px var(--primary-third_color);
+  transform: translateY(-2px);
+}
+.sinin_form {
+  display: flex;
+  flex-direction: column;
+}
+.sinin_form input {
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  border: 2px solid #000;
+}
+.sinin_form input::placeholder {
+  color: rgb(0, 0, 0);
+  position: relative;
+  left: 5px;
+}
+.sinin_form label {
+  margin-top: 5%;
+  color: #fff;
+}
+.sin_in_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 5%;
+}
+.sin_in_buttons button {
+  color: #ffffff;
+  width: 150px;
+  height: 40px;
+  background-color: #000000;
+  border-radius: 20px;
+  border: 2px solid var(--primary-third_color);
+  transition: all 0.3s;
+}
+.sin_in_buttons button:hover {
+  box-shadow: 0px 0px 3px 3px var(--primary-third_color);
+  transform: translateY(-5px);
+}
+/* end sin in section */
+
+/* start footer */
+.footer {
+  margin-top: 50px;
+  background-color: black;
+}
+.footer_about p {
+  color: #fff;
+}
+.footer_continer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 0 40px;
+}
+.footer_continer h3 {
+  color: #fff;
+  margin: 15px 0;
+  font-size: 18px;
+  border-left: 3px solid var(--primary-third_color);
+  padding-left: 8px;
+}
+.footer_social a img {
+  border-radius: 50%;
+  transition: all 0.3s;
+  width: 60px;
+}
+.footer_social a img:hover {
+  box-shadow: 0 0 5px 5px var(--primary-third_color);
+  transform: translateY(-5px);
+}
+.footer_continer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer_continer a:hover {
+  color: var(--primary-third_color);
+}
+.footer_bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+  font-size: 14px;
+  color: #ffffff;
+}
+/* end footer */
