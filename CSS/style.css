@@ -1,0 +1,7 @@
+.hero{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+}
+.home-title{
+    text-align: center;
+}
