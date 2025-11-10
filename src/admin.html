@@ -20,8 +20,8 @@
         </div>
         <nav class="navbar" id="navbar">
             <a href="index.html">accueil</a>
-            <a href="#evenemen">événement</a>
-            <a href="#formations">Formations</a>
+            <a href="#event-section">événement</a>
+            <a href="#formation-section">Formations</a>
             <a href="#footer">Contact</a>
         </nav>
     </header>
@@ -100,7 +100,7 @@
             </div>
             <div class="admin_information">
                 <div>
-                    <p><strong>Le nom:</strong>test</p>
+                    <p><strong>nom:</strong>test</p>
                     <p><strong>Age:</strong>test</p>
 >>>>>>> add896491f528c969ae98a4940dc795aa2bcf2f2:src/admin.html
                 </div>
@@ -109,12 +109,132 @@
                     <p><strong>Email:</strong>test</p>
                 </div>
                 <div>
-                    <p><strong>Campus:</strong>Youssoufia</p>
+                    <p><strong>Campus:</strong>test</p>
                     <p><strong class="conacted"></strong>Connected</p>
                 </div>
             </div>
         </section>
         <!-- end user_information -->
+        <!-- start add evenment  -->
+        <section class="event-section" id="event-section">
+            <h2>Add New Event</h2>
+            <form class="event-form" id="event_form">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter event title">
+
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date">
+
+                <label for="location">Location</label>
+                <input type="text" name="location" id="location" placeholder="Enter location">
+
+                <label for="description">Description</label>
+                <textarea id="description" name="description" placeholder="Short description"></textarea>
+
+                <label for="type">Type</label>
+                <select name="type" id="type">
+                    <option value="">Select type</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="club">Club</option>
+                    <option value="conference">Conference</option>
+                    <option value="other">Other</option>
+                </select>
+                <button type="submit" id="save_event">Save Event</button>
+            </form>
+
+            <div class="upcoming-events">
+                <h2>Upcoming Events</h2>
+                <div class="event-list">
+
+                    <div class="event-card">
+                        <h3>Club: Coding Dojo</h3>
+                        <p><strong>Date:</strong> 5 December 2025</p>
+                        <p><strong>Location:</strong> Lab 3</p>
+                        <p><strong>Type:</strong> Club</p>
+                        <p><strong>Frequency:</strong> Weekly</p>
+                        <p><strong>Contact:</strong> Alice Martin &lt;alice@campus.edu&gt;</p>
+                        <p><strong>Fees:</strong> Free</p>
+                        <p>Code practice sessions and reviews. Join the club to enhance your skills in a collaborative
+                            environment.</p>
+                        <a href="#" class="register-btn">Join the Club</a>
+                    </div>
+
+                    <div class="event-card">
+                        <h3>Workshop: Git & GitHub</h3>
+                        <p><strong>Date:</strong> 10 December 2025</p>
+                        <p><strong>Location:</strong> Room 204</p>
+                        <p><strong>Type:</strong> Workshop</p>
+                        <p><strong>Level:</strong> Beginner</p>
+                        <p><strong>Max participants:</strong> 25</p>
+                        <p><strong>Required:</strong> Laptop, Git installed</p>
+                        <p>Hands-on Git practice. Learn the basics of Git and GitHub through guided projects.</p>
+                        <a href="#" class="register-btn">Register Here</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- end add evenment  -->
+        <!-- start add formation -->
+        <section class="formation-section" id="formation-section">
+            <h2>Add New Formation</h2>
+            <form class="formation-form" id="formation_form">
+                <label for="theme">Theme</label>
+                <input type="text" id="theme" name="theme" placeholder="Enter formation theme">
+
+                <label for="duration">Duration (hours)</label>
+                <input type="number" id="duration" name="duration" placeholder="e.g. 12">
+
+                <label for="trainer">Trainer</label>
+                <input type="text" id="trainer" name="trainer" placeholder="Trainer name">
+
+                <label for="capacity">Capacity</label>
+                <input type="number" id="capacity" name="capacity" placeholder="Max participants">
+
+                <label for="participants">Participants (comma separated)</label>
+                <input type="text" id="participants" name="participants" placeholder="e.g. user_abc123, user_def456">
+
+                <button type="submit" id="save_formation">Save Formation</button>
+            </form>
+
+            <div class="formations">
+                <h2>Available Formations</h2>
+                <div class="formations-card">
+
+                    <div class="formation-card" id="form_1">
+                        <h3>Développement Web Moderne</h3>
+                        <p><strong>Duration:</strong> 12 hours</p>
+                        <p><strong>Trainer:</strong> Sofia Karim</p>
+                        <p><strong>Capacity:</strong> 20 participants</p>
+                        <p><strong>Enrolled:</strong> 3 participants</p>
+                        <p><strong>Completion rate:</strong> 15%</p>
+                        <a href="#" class="register-btn">Enroll</a>
+                    </div>
+
+                    <div class="formation-card" id="form_2">
+                        <h3>Introduction to Machine Learning</h3>
+                        <p><strong>Duration:</strong> 16 hours</p>
+                        <p><strong>Trainer:</strong> Hassan El Mekki</p>
+                        <p><strong>Capacity:</strong> 25 participants</p>
+                        <p><strong>Enrolled:</strong> 0 participant</p>
+                        <p><strong>Completion rate:</strong> 0%</p>
+                        <a href="#" class="register-btn">Enroll</a>
+                    </div>
+
+                    <div class="formation-card" id="form_3">
+                        <h3>UI/UX Design Basics</h3>
+                        <p><strong>Duration:</strong> 8 hours</p>
+                        <p><strong>Trainer:</strong> Leïla Ben Amar</p>
+                        <p><strong>Capacity:</strong> 15 participants</p>
+                        <p><strong>Enrolled:</strong> 2 participants</p>
+                        <p><strong>Completion rate:</strong> 13%</p>
+                        <a href="#" class="register-btn">Enroll</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- end add formation  -->
     </main>
     <!-- end main -->
     <!-- start footer -->
@@ -167,8 +287,7 @@
         </div>
     </footer>
     <!-- end footer -->
+    <script src="../JS/script.js"></script>
 </body>
 
 </html>
-
-<script src="JS/script.js"></script>

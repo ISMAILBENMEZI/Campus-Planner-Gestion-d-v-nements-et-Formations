@@ -32,23 +32,63 @@
 
     <!-- start main  -->
     <main class="main" id="main">
-        <!-- start sin_in section  -->
-        <section class="sin_in" id="sin_in">
-            <button class="sign_out" id="sign_out">X</button>
-            <form class="sinin_form" id="sinin_form">
-                <label for="user_name">Name</label>
-                <input type="text" id="user_name" name="first_name" placeholder="Your name...">
+        <!-- start sin_in admin section  -->
+        <section class="sin_in_admin" id="sin_in_admin">
+            <button class="sign_out_admin" id="sign_out_admin">X</button>
+            <form class="sinin_form_admin" id="sinin_form_admin">
+                <h2 class="form_title_admin">Admin Sign In</h2>
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+
                 <label for="email">Email</label>
-                <input type="email" id="email" name="Email" placeholder="Your email...">
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+                <label for="campus">Campus</label>
+                <input type="text" id="campus" name="campus" placeholder="Enter your campus">
+
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age">
+
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Your password...">
-                <div class="sin_in_buttons">
-                    <button type="submit">Send</button>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+
+                <div class="sin_in_buttons_admin">
+                    <button type="submit">Sign In</button>
                     <button type="reset">Clear</button>
                 </div>
             </form>
         </section>
-        <!-- end sin_in section  -->
+        <!-- end sin_in admin section  -->
+        <!-- start sin_in student section -->
+        <section class="sin_instudent" id="sin_instudent">
+            <button class="sign_outstudent" id="sign_outstudent">X</button>
+            <form class="sinin_formstudent" id="sinin_formstudent">
+                <label for="student_username">Username</label>
+                <input type="text" id="student_username" name="student_username" placeholder="Your username...">
+
+                <label for="student_email">Email</label>
+                <input type="email" id="student_email" name="student_email" placeholder="Your email...">
+
+                <label for="student_phone">Phone</label>
+                <input type="tel" id="student_phone" name="student_phone" placeholder="Your phone number...">
+
+                <label for="student_campus">Campus</label>
+                <input type="text" id="student_campus" name="student_campus" placeholder="Your campus...">
+
+                <label for="student_age">Age</label>
+                <input type="number" id="student_age" name="student_age" placeholder="Your age...">
+
+                <div class="sin_in_buttonsstudent">
+                    <button type="submit">Sign In</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </section>
+        <!-- end sin_in student section -->
         <!-- start hero section -->
         <section class="hero">
             <div>
@@ -201,8 +241,7 @@
         </div>
     </footer>
     <!-- end footer -->
+    <script src="../JS/script.js"></script>
 </body>
 
 </html>
-
-<script src="JS/script.js"></script>
