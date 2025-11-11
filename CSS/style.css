@@ -100,7 +100,56 @@ body {
 }
 
 /* end header */
+/* start bad and good */
+.errormesages {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  width: 100%;
+  height: 0;
+}
 
+.errormesages #bad {
+  background-color: #fff;
+  color: red;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: none;
+}
+
+.errormesages #good {
+  background-color: #fff;
+  color: rgb(0, 255, 38);
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: none;
+}
+
+.errormesages #bad,
+.errormesages #good {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  animation: fade 0.3s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* end bad and good */
 /* start sin in admin*/
 .sin_in_admin {
   display: none;
@@ -600,7 +649,48 @@ body {
 /* end home */
 
 
+.students_information .connected {
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green;
+  color: green;
+  margin-right: 5px;
+}
 
+/* end student information  */
+/* start student game */
+.student_game {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.student_game .start_game {
+  text-align: center;
+}
+
+.student_game .start_game button {
+  background-color: #0056b3;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.student_game .start_game button:hover {
+  background-color: #003f7f;
+}
+
+/* end student game */
 /* start footer */
 .footer {
   margin-top: 50px;
@@ -716,11 +806,12 @@ body {
     gap: 10px;
   }
 
-  .students_information div{
+  .students_information div {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
+
   .student_img img {
     width: 100px;
     height: 100px;

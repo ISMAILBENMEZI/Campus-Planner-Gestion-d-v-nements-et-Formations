@@ -1,85 +1,146 @@
-// // let arr  = [];
-// // const l7ya = (callback) => {
-// //     fetch("https://simplonline-v3-prod.s3.eu-west-3.amazonaws.com/media/file/json/evenements-69086d33d21e2465419657.json").then((res) => res.json()).then((dat)=> arr = Array.from(dat))
-// // }
 
-// // l7ya();
+document.addEventListener('DOMContentLoaded', function () {
 
-// let arr = [
-//   {
-//     "id": "evt_1",
-//     "title": "Conférence: IA et Éducation",
-//     "date": "2026-01-15",
-//     "location": "Amphi A",
-//     "type": "conférence",
-//     "description": "Impact de l'IA sur les méthodes d'enseignement.",
-//     "speaker": "Dr. Marie Dupont",
-//     "duration": 60,
-//     "registrationLink": "https://example.com/ia-education"
-//   },
-//   {
-//     "id": "evt_2",
-//     "title": "Atelier: Git & GitHub",
-//     "date": "2025-12-10",
-//     "location": "Salle 204",
-//     "type": "atelier",
-//     "description": "Pratique collaborative avec Git.",
-//     "materials": "Ordinateur portable, Git installé",
-//     "skillLevel": "débutant",
-//     "maxParticipants": 25
-//   },
-//   {
-//     "id": "evt_3",
-//     "title": "Club: Coding Dojo",
-//     "date": "2025-12-05",
-//     "location": "Lab 3",
-//     "type": "club",
-//     "description": "Sessions de katas et revues de code.",
-//     "frequency": "hebdomadaire",
-//     "contact": "Alice Martin <alice@campus.edu>",
-//     "membershipFee": 0
-//   },
-//   {
-//     "id": "evt_4",
-//     "title": "Soirée Hackathon Warmup",
-//     "date": "2025-11-28",
-//     "location": "Espace Innov",
-//     "type": "autre",
-//     "description": "Préparation au hackathon annuel.",
-//     "customFieldLabel": "Dress code",
-//     "customFieldValue": "Casual"
-//   },
-//   {
-//     "id": "evt_5",
-//     "title": "Conférence: Sécurité Web Moderne",
-//     "date": "2026-02-02",
-//     "location": "Amphi B",
-//     "type": "conférence",
-//     "description": "OWASP Top 10 et bonnes pratiques.",
-//     "speaker": "Jean-Pierre Lefèvre",
-//     "duration": 90,
-//     "registrationLink": "https://example.com/sec-web"
-//   }
-// ]
+    let nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]{3,}$/;
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let passwordRegex = /^(?=.*[A-Z])(?=.*\d).{6,}$/;
+    let phoneRegex = /^(\+?\d{1,3}[- ]?)?\d{9,10}$/;
 
-// const form = document.getElementById("from_evenment");
+    const badMessag = document.getElementById("bad");
+    const goodMessag = document.getElementById("good");
 
-// arr.forEach((subarr) => {
-//     if (subarr.type === "autre"){
-//         // form.innerHTML = "";
-//         Object.entries(subarr).forEach(([key, val], ind) => {
-//             if (ind > 4) {
-//                 console.log(ind)
-//                 let input = document.createElement("input");
-//                 let ph = (key.match(/[A-Z]/g) || []).forEach(letter => {
-//                     let joined = key;
-//                     let splitted = joined.split(letter);
-//                     joined = splitted.join(" ");
-//                 }) || key;
-//                 input.placeholder = ph;
-//                 input.type = (typeof val) === "string"? "text" : "number";
-//                 form.appendChild(input);
-//             }
-//         })
+    function showMessage(element, text) {
+        element.textContent = text;
+        element.style.display = "block";
+        setTimeout(() => element.style.display = "none", 3000);
+    }
+
+    function adminSinIn() {
+        const adminButton = document.getElementById("admin_sinin");
+        const adminSection = document.getElementById("sin_in_admin");
+        const sinOutAdmin = document.getElementById("sign_out_admin");
+        const adminForm = document.getElementById("sinin_form_admin");
+
+        adminButton.addEventListener("click", function () {
+            const checkAdminData = localStorage.getItem("adminInformation")
+            if (checkAdminData)
+                setTimeout(() => { window.location.href = "admin.html" }, 500)
+
+            else
+                adminSection.style.display = "block";
+
+        })
+
+        sinOutAdmin.addEventListener("click", function () {
+            adminSection.style.display = "none";
+        })
+
+        adminForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const adminName = document.getElementById("username").value.trim();
+            const adminEmail = document.getElementById("email").value.trim();
+            const adminPhone = document.getElementById("phone").value.trim();
+            const adminCampus = document.getElementById("campus").value.trim();
+            const adminAge = Number(document.getElementById("age").value);
+            const adminPassword = document.getElementById("password").value.trim();
+
+            if (!adminName || !adminEmail || !adminPhone || !adminCampus || !adminAge || !adminPassword)
+                return showMessage(badMessag, "Please fill all fileds");
+
+            if (adminAge < 20)
+                return showMessage(badMessag, "Age must be 20 or older");
+
+
+            if (!emailRegex.test(adminEmail))
+                return showMessage(badMessag, "Invalid email address");
+
+
+            if (!phoneRegex.test(adminPhone))
+                return showMessage(badMessag, "Invalid phone number");
+
+
+            if (!passwordRegex.test(adminPassword))
+                return showMessage(badMessag, "Invalid password (1 uppercase, 1 digit, 6+ chars)");
+            let SaveAdminInformtion = { adminName, adminEmail, adminPhone, adminCampus, adminAge, adminPassword }
+            localStorage.setItem("adminInformation", JSON.stringify(SaveAdminInformtion));
+            showMessage(goodMessag, "Sign-in successful!")
+            adminForm.reset();
+            setTimeout(() => { window.location.href = "admin.html" }, 1000)
+        })
+    }
+    adminSinIn();
+
+    function studentSinIn() {
+        const studentButton = document.getElementById("etudiant_sinin");
+        const studentSinout = document.getElementById("sign_outstudent");
+        const studentSinin = document.getElementById("sin_instudent");
+        const studentForm = document.getElementById("sinin_formstudent");
+
+        studentButton.addEventListener("click", function () {
+            const checkStudentData = localStorage.getItem("studentInformations");
+            if (checkStudentData)
+                setTimeout(() => { window.location.href = "student.html"; }, 500);
+            else
+                studentSinin.style.display = "block";
+
+        })
+
+        studentSinout.addEventListener("click", function () {
+            studentSinin.style.display = "none";
+        })
+
+        studentForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const studentName = document.getElementById("student_username").value.trim();
+            const studentEmail = document.getElementById("student_email").value.trim();
+            const studentPassword = document.getElementById("student_password").value.trim();
+            const studentPhone = document.getElementById("student_phone").value.trim();
+            const studentCampus = document.getElementById("student_campus").value.trim();
+            const studentAge = Number(document.getElementById("student_age").value);
+
+            if (!studentName || !studentEmail || !studentPhone || !studentCampus || !studentAge || !studentPassword)
+                return showMessage(badMessag, "Please fill all fileds");
+
+            if (studentAge < 18)
+                return showMessage(badMessag, "Age must be 20 or older");
+
+
+            if (!emailRegex.test(studentEmail))
+                return showMessage(badMessag, "Invalid email address");
+
+
+            if (!phoneRegex.test(studentPhone))
+                return showMessage(badMessag, "Invalid phone number");
+            if (!passwordRegex.test(studentPassword))
+                return showMessage(badMessag, "Invalid password (1 uppercase, 1 digit, 6+ chars)")
+
+
+            let studentsInformation = { studentName, studentEmail, studentPhone, studentCampus, studentAge };
+
+            localStorage.setItem("studentInformations", JSON.stringify(studentsInformation));
+
+            showMessage(goodMessag, "Sign-in successful!");
+
+            setTimeout(() => { window.location.href = "student.html"; }, 1000);
+        })
+    }
+    studentSinIn()
+})
+
+
+
+
+
+
+
+// fetch("../data/formations.json").then((res) => {
+
+//     if (res.ok) {
+//         return res.json()
 //     }
+
+// }).then((data) => {
+//     console.log(data);
 // })
