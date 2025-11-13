@@ -1,0 +1,42 @@
+[
+  {
+    "id": "form_1",
+    "theme": "Développement Web Moderne",
+    "duration": 12,
+    "trainer": "Sofia Karim",
+    "capacity": 20,
+    "participants": ["user_abc123", "user_def456", "user_xyz789"]
+  },
+  {
+    "id": "form_2",
+    "theme": "Introduction au Machine Learning",
+    "duration": 16,
+    "trainer": "Hassan El Mekki",
+    "capacity": 25,
+    "participants": []
+  },
+  {
+    "id": "form_3",
+    "theme": "UI/UX Design Basics",
+    "duration": 8,
+    "trainer": "Leïla Ben Amar",
+    "capacity": 15,
+    "participants": ["user_ui1", "user_ui2"]
+  },
+  {
+    "id": "form_4",
+    "theme": "Docker & DevOps",
+    "duration": 10,
+    "trainer": "Nabil Rachid",
+    "capacity": 18,
+    "participants": ["user_dev1", "user_dev2", "user_dev3", "user_dev4", "user_dev5"]
+  },
+  {
+    "id": "form_5",
+    "theme": "Sécurité des Applications",
+    "duration": 14,
+    "trainer": "Claire Fontaine",
+    "capacity": 12,
+    "participants": []
+  }
+]
