@@ -131,3 +131,7 @@ function editeAdminInformation(id) {
     }
 }
 
+function AdminSininInformation()
+{
+    
+}
