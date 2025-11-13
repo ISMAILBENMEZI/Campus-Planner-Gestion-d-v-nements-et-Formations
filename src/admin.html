@@ -118,7 +118,7 @@
         </section>
         <!-- end add evenment  -->
         <!-- start add formation -->
-        <section class="formation-section" id="formation-section">
+        <section class="formation-section">
             <h2>Add New Formation</h2>
             <form class="formation-form" id="formation_form">
                 <label for="theme">Theme</label>
@@ -134,45 +134,15 @@
                 <input type="number" id="capacity" name="capacity" placeholder="Max participants">
 
                 <label for="participants">Participants (comma separated)</label>
-                <input type="text" id="participants" name="participants" placeholder="e.g. user_abc123, user_def456">
+                <input type="text" id="participants" name="participants" placeholder="user_abc123, user_def456">
 
-                <button type="submit" id="save_formation">Save Formation</button>
+                <button type="submit" id="save_input_formation">Save Formation</button>
             </form>
 
             <div class="formations">
                 <h2>Available Formations</h2>
-                <div class="formations-card">
-
-                    <div class="formation-card" id="form_1">
-                        <h3>Développement Web Moderne</h3>
-                        <p><strong>Duration:</strong> 12 hours</p>
-                        <p><strong>Trainer:</strong> Sofia Karim</p>
-                        <p><strong>Capacity:</strong> 20 participants</p>
-                        <p><strong>Enrolled:</strong> 3 participants</p>
-                        <p><strong>Completion rate:</strong> 15%</p>
-                        <a href="#" class="register-btn">Enroll</a>
-                    </div>
-
-                    <div class="formation-card" id="form_2">
-                        <h3>Introduction to Machine Learning</h3>
-                        <p><strong>Duration:</strong> 16 hours</p>
-                        <p><strong>Trainer:</strong> Hassan El Mekki</p>
-                        <p><strong>Capacity:</strong> 25 participants</p>
-                        <p><strong>Enrolled:</strong> 0 participant</p>
-                        <p><strong>Completion rate:</strong> 0%</p>
-                        <a href="#" class="register-btn">Enroll</a>
-                    </div>
-
-                    <div class="formation-card" id="form_3">
-                        <h3>UI/UX Design Basics</h3>
-                        <p><strong>Duration:</strong> 8 hours</p>
-                        <p><strong>Trainer:</strong> Leïla Ben Amar</p>
-                        <p><strong>Capacity:</strong> 15 participants</p>
-                        <p><strong>Enrolled:</strong> 2 participants</p>
-                        <p><strong>Completion rate:</strong> 13%</p>
-                        <a href="#" class="register-btn">Enroll</a>
-                    </div>
-
+                <div class="formations-card" id="admin_formation_card">
+                    <!-- creat element with use js -->
                 </div>
             </div>
         </section>
@@ -229,7 +199,8 @@
         </div>
     </footer>
     <!-- end footer -->
-    <script src="../JS/script.js"></script>
+    <script src="../JS/admin.js"></script>
 </body>
 
 </html>
+
