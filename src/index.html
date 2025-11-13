@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>YouCode Organisation</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!-- <link href="./output.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <!-- start header  -->
+    <header class="header" id="header">
+        <div class="header_title">
+            <h2><span class="we">We</span>Code</h2>
+        </div>
+        <nav class="navbar" id="navbar">
+            <a href="#evenemen">événement</a>
+            <a href="#formations">Formations</a>
+            <a href="#footer">Contact</a>
+        </nav>
+        <div class="nav_button">
+            <button type="submit" id="admin_sinin">Admin</button>
+            <button type="submit" id="etudiant_sinin">étudiant</button>
+            <button type="button" id="dark_mode" class="dark_mode">
+                <span class="sun_icon">☀️</span>
+                <span class="moon_icon">🌙</span>
+            </button>
+        </div>
+    </header>
+    <!-- end header -->
+    <!-- errormessag -->
+    <article>
+        <div class="errormesages">
+            <p id="bad"></p>
+            <p id="good"></p>
+        </div>
+    </article>
+    <!-- errormessag -->
+    <!-- start main  -->
+    <main class="main" id="main">
+        <!-- start sin_in admin section  -->
+        <section class="sin_in_admin" id="sin_in_admin">
+            <button class="sign_out_admin" id="sign_out_admin">X</button>
+            <form class="sinin_form_admin" id="sinin_form_admin">
+                <h2 class="form_title_admin">Admin Sign In</h2>
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+                <label for="campus">Campus</label>
+                <input type="text" id="campus" name="campus" placeholder="Enter your campus">
+
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+
+                <div class="sin_in_buttons_admin">
+                    <button type="submit">Sign In</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </section>
+        <!-- end sin_in admin section  -->
+        <!-- start sin_in student section -->
+        <section class="sin_instudent" id="sin_instudent">
+            <button class="sign_outstudent" id="sign_outstudent">X</button>
+            <form class="sinin_formstudent" id="sinin_formstudent">
+                <label for="student_username">Username</label>
+                <input type="text" id="student_username" name="student_username" placeholder="Your username...">
+
+                <label for="student_email">Email</label>
+                <input type="email" id="student_email" name="student_email" placeholder="Your email...">
+
+                <label for="student_password">Password</label>
+                <input type="password" id="student_password" name="student_password" , placeholder="Your password...">
+
+                <label for="student_phone">Phone</label>
+                <input type="tel" id="student_phone" name="student_phone" placeholder="Your phone number...">
+
+                <label for="student_campus">Campus</label>
+                <input type="text" id="student_campus" name="student_campus" placeholder="Your campus...">
+
+                <label for="student_age">Age</label>
+                <input type="number" id="student_age" name="student_age" placeholder="Your age...">
+
+                <div class="sin_in_buttonsstudent">
+                    <button type="submit">Sign In</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </section>
+        <!-- end sin_in student section -->
+        <!-- start hero section -->
+        <section class="hero">
+            <div>
+                <h1><span>We</span>Code</h1>
+            </div>
+            <div>
+                <p>Bienvenue sur WeCode, votre espace numérique dédié à la vie du campus.
+                    Découvrez les événements, participez aux formations et amusez-vous avec nos jeux interactifs.
+                    Apprenez, partagez et grandissez avec la communauté WeCode !</p>
+            </div>
+        </section>
+        <!-- end hero section -->
+        <!-- start evenemrnt section -->
+        <section class="evenemen" id="evenemen">
+            <h2>Événements à venir</h2>
+            <div class="evenemen_card" id="evenemen_card">
+
+
+
+            </div>
+        </section>
+        <!-- start evenemrnt section -->
+
+        <!-- start Formations section -->
+        <section class="formations">
+            <h2>Formations disponibles</h2>
+
+            <div class="formations_card" id="formation_cards">
+                <!-- <div class="formation-card" id="form_1">
+                    <h3>Développement Web Moderne</h3>
+                    <p><strong>Durée :</strong> 12 heures</p>
+                    <p><strong>Formateur :</strong> Sofia Karim</p>
+                    <p><strong>Capacité :</strong> 20 participants</p>
+                    <p><strong>Inscrits :</strong> 3 participants</p>
+                    <p><strong>Taux de remplissage :</strong> 15%</p>
+                    <a href="#" class="register-btn">S'inscrire</a>
+                </div> -->
+            </div>
+        </section>
+        <!-- end Formations section -->
+    </main>
+    <!-- end main -->
+
+    <!-- start footer -->
+    <footer class="footer" id="footer">
+        <div class="footer_continer">
+            <div class="footer_about">
+                <h3>YouCode Organisation</h3>
+                <p>
+                    ton espace d’innovation et de développement étudiant.
+                    Découvre des événements, des formations et des
+                    défis pour booster ton avenir !
+                </p>
+            </div>
+            <div class="footer_OurOrganisation">
+                <h3>
+                    Our Organisation
+                </h3>
+                <ul>
+                    <li><a href="https://youcode.ma/">YouCode Official</a></li>
+                    <li><a href="#">Campus Events</a></li>
+                    <li><a href="#">Student Trainings</a></li>
+                    <li><a href="#">Innovation Challenges</a></li>
+                </ul>
+            </div>
+            <div class="footer_support">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Nous Contacter</a></li>
+                    <li><a href="#">Signaler un Problème</a></li>
+                    <li><a href="#">Politique de Confidentialité</a></li>
+                </ul>
+            </div>
+            <div class="footer_social">
+                <h3>Rejoins la Communauté</h3>
+                <div class="social_media">
+                    <a href="https://www.facebook.com/YouCodeSchool"><img src="../IMG/facebook_6507901.png"
+                            alt="Facebook"></a>
+                    <a href="https://www.instagram.com/youcodeschool?igsh=NTBuY3M3czI3OTRq"><img
+                            src="../IMG/camera_5365099.png" alt="Instagram"></a>
+                    <a href="https://x.com/YouCode18?t=zuoo2tA-Fgev-kyeoSCGWg&s=09"><img
+                            src="../IMG/twitter_1057154.png" alt="x"></a>
+                    <a href="https://youtube.com/@youcodeschool2222?si=pjAlG27aZLT6e8n4"><img
+                            src="../IMG/video_3293641.png" alt="youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <p>© 2025 YouCode Organisation — Créé pour les étudiants, par les étudiants 🎓</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <script src="../JS/index.js"></script>
+</body>
+
+</html>
