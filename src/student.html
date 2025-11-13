@@ -22,6 +22,10 @@
             <a href="#event-section">Événements</a>
             <a href="#formation-section">Formations</a>
             <a href="#footer">Contact</a>
+            <button type="button" id="dark_mode" class="dark_mode">
+                <span class="sun_icon">☀️</span>
+                <span class="moon_icon">🌙</span>
+            </button>
         </nav>
     </header>
     <!-- end header -->
@@ -40,7 +44,7 @@
             <div class="student_img">
                 <img src="../IMG/Admin-Profile-Vector-PNG-Clipart.png" alt="Student Profile">
             </div>
-            <div class="students_information">
+            <div class="students_information" id="students_information_sinIn">
                 <div>
                     <p><strong>Nom:</strong> Test</p>
                     <p><strong>Âge:</strong> Test</p>
@@ -60,31 +64,7 @@
         <!-- start events -->
         <section class="event-section" id="event-section">
             <h2>Événements Disponibles</h2>
-            <div class="event-list">
-                <div class="event-card">
-                    <h3>Club: Coding Dojo</h3>
-                    <p><strong>Date:</strong> 5 Décembre 2025</p>
-                    <p><strong>Lieu:</strong> Lab 3</p>
-                    <p><strong>Type:</strong> Club</p>
-                    <p><strong>Fréquence:</strong> Hebdomadaire</p>
-                    <p><strong>Contact:</strong> Alice Martin &lt;alice@campus.edu&gt;</p>
-                    <p><strong>Frais:</strong> Gratuit</p>
-                    <p>Séances de pratique et de révision de code. Rejoignez le club pour améliorer vos compétences !
-                    </p>
-                    <a href="#" class="register-btn">Rejoindre le club</a>
-                </div>
-
-                <div class="event-card">
-                    <h3>Workshop: Git & GitHub</h3>
-                    <p><strong>Date:</strong> 10 Décembre 2025</p>
-                    <p><strong>Lieu:</strong> Salle 204</p>
-                    <p><strong>Type:</strong> Atelier</p>
-                    <p><strong>Niveau:</strong> Débutant</p>
-                    <p><strong>Places:</strong> 25</p>
-                    <p><strong>Matériel requis:</strong> Ordinateur avec Git installé</p>
-                    <p>Atelier pratique sur Git et GitHub à travers des projets guidés.</p>
-                    <a href="#" class="register-btn">S'inscrire</a>
-                </div>
+            <div class="event-list" id="event-list">
             </div>
         </section>
         <!-- end events -->
@@ -93,17 +73,6 @@
         <section class="formation-section">
             <h2>Formations Disponibles</h2>
             <div class="formations-card" id="formation_cards">
-
-                <!-- <div class="formation-card">
-                    <h3>Développement Web Moderne</h3>
-                    <p><strong>Durée:</strong> 12 heures</p>
-                    <p><strong>Formateur:</strong> Sofia Karim</p>
-                    <p><strong>Capacité:</strong> 20 participants</p>
-                    <p><strong>Inscrits:</strong> 3 participants</p>
-                    <p><strong>Taux d’avancement:</strong> 15%</p>
-                    <a href="#" class="register-btn">S'inscrire</a>
-                </div> -->
-
             </div>
         </section>
         <!-- end  formations -->

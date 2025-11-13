@@ -23,6 +23,10 @@
             <a href="#event-section">événement</a>
             <a href="#formation-section">Formations</a>
             <a href="#footer">Contact</a>
+            <button type="button" id="dark_mode" class="dark_mode">
+                <span class="sun_icon">☀️</span>
+                <span class="moon_icon">🌙</span>
+            </button>
         </nav>
     </header>
     <!-- end header -->
@@ -41,7 +45,7 @@
             <div class="admin_img">
                 <img src="../IMG/Admin-Profile-Vector-PNG-Clipart.png" alt="">
             </div>
-            <div class="admin_information">
+            <div class="admin_information" id="admin_information_SinIN">
                 <div>
                     <p><strong>nom:</strong>test</p>
                     <p><strong>Age:</strong>test</p>
@@ -74,44 +78,22 @@
                 <textarea id="description" name="description" placeholder="Short description"></textarea>
 
                 <label for="type">Type</label>
-                <select name="type" id="type">
+                <select name="type" id="type" required>
                     <option value="">Select type</option>
-                    <option value="workshop">Workshop</option>
+                    <option value="atelier">atelier</option>
                     <option value="club">Club</option>
                     <option value="conference">Conference</option>
-                    <option value="other">Other</option>
+                    <option value="autre">autre</option>
                 </select>
+                <div id="card-content"></div>
                 <button type="submit" id="save_event">Save Event</button>
+
             </form>
 
             <div class="upcoming-events">
                 <h2>Upcoming Events</h2>
-                <div class="event-list">
+                <div class="event-list" id="admin-event">
 
-                    <div class="event-card">
-                        <h3>Club: Coding Dojo</h3>
-                        <p><strong>Date:</strong> 5 December 2025</p>
-                        <p><strong>Location:</strong> Lab 3</p>
-                        <p><strong>Type:</strong> Club</p>
-                        <p><strong>Frequency:</strong> Weekly</p>
-                        <p><strong>Contact:</strong> Alice Martin &lt;alice@campus.edu&gt;</p>
-                        <p><strong>Fees:</strong> Free</p>
-                        <p>Code practice sessions and reviews. Join the club to enhance your skills in a collaborative
-                            environment.</p>
-                        <a href="#" class="register-btn">Join the Club</a>
-                    </div>
-
-                    <div class="event-card">
-                        <h3>Workshop: Git & GitHub</h3>
-                        <p><strong>Date:</strong> 10 December 2025</p>
-                        <p><strong>Location:</strong> Room 204</p>
-                        <p><strong>Type:</strong> Workshop</p>
-                        <p><strong>Level:</strong> Beginner</p>
-                        <p><strong>Max participants:</strong> 25</p>
-                        <p><strong>Required:</strong> Laptop, Git installed</p>
-                        <p>Hands-on Git practice. Learn the basics of Git and GitHub through guided projects.</p>
-                        <a href="#" class="register-btn">Register Here</a>
-                    </div>
 
                 </div>
             </div>
@@ -203,4 +185,3 @@
 </body>
 
 </html>
-
