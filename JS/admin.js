@@ -121,7 +121,6 @@ function editeAdminInformation(id) {
     formationAdminForm.onsubmit = function (e) {
         e.preventDefault();
         if (saveAdminFormation.textContent == "Modifier") {
-            console.log("hello")
             suprimeInformation(id)
             adminFormationCard.innerHTML = "";
             afficheAdmininformation();
@@ -131,3 +130,4 @@ function editeAdminInformation(id) {
         }
     }
 }
+
