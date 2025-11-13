@@ -26,14 +26,70 @@
         </nav>
     </header>
     <!-- end header -->
-    <!-- errormessag -->
-    <article>
-        <div class="errormesages">
-            <p id="bad"></p>
-            <p id="good"></p>
-        </div>
-    </article>
-    <!-- errormessag -->
+    <!-- start main  -->
+    <main class="main" id="main">
+        <!-- start home -->
+        <section class="home" id="home">
+            <div class="home-title" id="home-title">
+                <h1>We<span class="code" id="code">code</span>
+                </h1>
+            </div>
+            <div class="home-propos" id="home-propos">
+                <span class="propos" id="propos">À propos de WeCode</span>
+                <p>Bienvenue sur WeCode, une plateforme innovante dédiée à l’apprentissage du développement web et
+                    mobile.</p>
+                <p> Notre mission est d’aider les jeunes à acquérir les compétences numériques de demain à travers des
+                    formations pratiques, des événements technologiques, et des activités collaboratives.
+                </p>
+            </div>
+            <div class="home-card" id="home-card">
+                <div class="home-event" id="home-event">
+                    <span class="event" id="event">Événements à venir</span>
+                    <div class="event-image" id="event-image">
+                        <img src="IMG/pexels-bertellifotografia-29253461.jpg" alt="">
+                    </div>
+                    <div class="event-text" id="event-text">
+                        <span class="title-event" id="title-event"> Hackathon WeCode 2025</span>
+                        <span class="event-lieu" id="event-lieu">Campus Marrakech</span>
+                        <span class="event-description" id="event-description">Participez à un marathon de 48h de code
+                            en
+                            équipe pour développer une application innovante sur un thème surprise.
+                            Une occasion parfaite pour apprendre, collaborer et mettre vos idées en action !</span>
+                        <span class="event-date" id="event-date">du 15 au 17 décembre 2025</span>
+                    </div>
+                </div>
+                <div class="home-formation" id="home-formation">
+                    <span class="formation" id="formation">Formations disponibles</span>
+                    <div class="formation-image" id="formation-image">
+                        <img src="IMG/istockphoto-1363276509-1024x1024.jpg" alt="">
+                    </div>
+                    <div class="formation-text" id="formation-text">
+
+                        <span class="formation-contenu" id="formation-contenu">Contenu : HTML, CSS, JavaScript, PHP,
+                            MySQL, projets
+                            réels.</span>
+                        <span class="formation-objectif" id="formation-objectif"> Objectif : Devenir développeur web
+                            complet, prêt à intégrer le monde professionnel.</span>
+                        <span class="formation-dure" id="formation-dure">Durée : 6 mois</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end home -->
+        <!-- start sin_in section  -->
+        <section class="sin_in" id="sin_in">
+            <button class="sign_out" id="sign_out">X</button>
+            <form class="sinin_form" id="sinin_form">
+                <label for="user_name">Name</label>
+                <input type="text" id="user_name" name="first_name" placeholder="Your name...">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" placeholder="Your email...">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Your password...">
+                <div class="sin_in_buttons">
+                    <button type="submit">Send</button>
+                    <button type="reset">Clear</button>
+=======
     <!-- start main -->
     <main class="admin_page">
         <!-- start user_information -->
@@ -61,57 +117,39 @@
         <section class="event-section" id="event-section">
             <h2>Add New Event</h2>
             <form class="event-form" id="event_form">
+                
                 <label for="title">Title</label>
-                <input type="text" id="title" name="title" placeholder="Enter event title">
+                <input type="text" id="title" name="title" placeholder="Enter event title" required>
 
                 <label for="date">Date</label>
-                <input type="date" id="date" name="date">
+                <input type="date" id="date" name="date"required>
 
                 <label for="location">Location</label>
-                <input type="text" name="location" id="location" placeholder="Enter location">
+                <input type="text" name="location" id="location" placeholder="Enter location"required>
 
                 <label for="description">Description</label>
-                <textarea id="description" name="description" placeholder="Short description"></textarea>
+                <textarea id="description" name="description" placeholder="Short description"required></textarea>
 
                 <label for="type">Type</label>
-                <select name="type" id="type">
+                <select name="type" id="type"required>
                     <option value="">Select type</option>
-                    <option value="workshop">Workshop</option>
+                    <option value="atelier">atelier</option>
                     <option value="club">Club</option>
                     <option value="conference">Conference</option>
-                    <option value="other">Other</option>
+                    <option value="autre">autre</option>
                 </select>
+                <div id="card-content"></div>
+                </div>
                 <button type="submit" id="save_event">Save Event</button>
             </form>
-
+                
             <div class="upcoming-events">
                 <h2>Upcoming Events</h2>
-                <div class="event-list">
+                <div class="event-list" id="admin-event">
 
-                    <div class="event-card">
-                        <h3>Club: Coding Dojo</h3>
-                        <p><strong>Date:</strong> 5 December 2025</p>
-                        <p><strong>Location:</strong> Lab 3</p>
-                        <p><strong>Type:</strong> Club</p>
-                        <p><strong>Frequency:</strong> Weekly</p>
-                        <p><strong>Contact:</strong> Alice Martin &lt;alice@campus.edu&gt;</p>
-                        <p><strong>Fees:</strong> Free</p>
-                        <p>Code practice sessions and reviews. Join the club to enhance your skills in a collaborative
-                            environment.</p>
-                        <a href="#" class="register-btn">Join the Club</a>
-                    </div>
 
-                    <div class="event-card">
-                        <h3>Workshop: Git & GitHub</h3>
-                        <p><strong>Date:</strong> 10 December 2025</p>
-                        <p><strong>Location:</strong> Room 204</p>
-                        <p><strong>Type:</strong> Workshop</p>
-                        <p><strong>Level:</strong> Beginner</p>
-                        <p><strong>Max participants:</strong> 25</p>
-                        <p><strong>Required:</strong> Laptop, Git installed</p>
-                        <p>Hands-on Git practice. Learn the basics of Git and GitHub through guided projects.</p>
-                        <a href="#" class="register-btn">Register Here</a>
-                    </div>
+
+
 
                 </div>
             </div>
@@ -199,7 +237,7 @@
         </div>
     </footer>
     <!-- end footer -->
-    <script src="../JS/admin.js"></script>
+     <script src="../JS/admin.js"></script>
 </body>
 
 </html>
