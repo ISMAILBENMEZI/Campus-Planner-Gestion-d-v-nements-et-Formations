@@ -649,48 +649,7 @@ body {
 /* end home */
 
 
-.students_information .connected {
-  display: inline-flex;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: green;
-  color: green;
-  margin-right: 5px;
-}
 
-/* end student information  */
-/* start student game */
-.student_game {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.student_game .start_game {
-  text-align: center;
-}
-
-.student_game .start_game button {
-  background-color: #0056b3;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.student_game .start_game button:hover {
-  background-color: #003f7f;
-}
-
-/* end student game */
 /* start footer */
 .footer {
   margin-top: 50px;
