@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 50px;
+}
+
+.game-container {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.game-info {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.letters-guess {
+  margin-bottom: 20px;
+}
+
+.letters-guess span {
+  display: inline-block;
+  width: 30px;
+  height: 40px;
+  margin: 5px;
+  border-bottom: 2px solid #333;
+  font-size: 24px;
+  text-transform: uppercase;
+  vertical-align: bottom;
+}
+
+.letters-guess .with-space {
+  border-bottom: none;
+  width: 20px;
+}
+
+.letters {
+  margin-bottom: 20px;
+}
+
+.letter-box {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  margin: 5px;
+  background-color: #fff;
+  border: 2px solid #333;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.letter-box.clicked {
+  background-color: #333;
+  color: #fff;
+  cursor: default;
+}
+
+.attempts {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+button.change-category {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  color: #fff;
+  padding: 30px;
+  font-size: 24px;
+  border-radius: 10px;
+  z-index: 1000;
+}

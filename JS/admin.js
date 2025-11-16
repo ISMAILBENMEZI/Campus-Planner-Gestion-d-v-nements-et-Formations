@@ -3,7 +3,7 @@ const adminFormationCard = document.getElementById("admin_formation_card");
 
 document.addEventListener('DOMContentLoaded', function () {
     const checkAdminJson = JSON.parse(localStorage.getItem("information"));
-    if (checkAdminJson.length == 0) {
+    if (!checkAdminJson) {
         adminJsonInformation();
     }
     adminFormationCard.innerHTML = "";
